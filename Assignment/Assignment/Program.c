@@ -3,95 +3,6 @@
 #include <string.h>
 #include <stdlib.h> 
 
-// khai bao cac chuc nang
-void kiemTraSoNguyen();
-void timUCLN_BCNN();
-void tinhTienKaraoke();
-void tinhTienDien();
-void doiTien();
-void tinhLaiSuatVay();
-void vayTienMuaXe();
-void sapXepSinhVien();
-void gameLott();
-void tinhToanPhanSo();
-
-void lapChucNang(int chonChucNang)
-{
-	int tiepTuc = 1;
-	while (tiepTuc == 1)
-	{
-		switch (chonChucNang)
-		{
-		case 1:
-			kiemTraSoNguyen(); 
-			break;
-		case 2:
-			timUCLN_BCNN();
-			break;
-		case 3:
-			tinhTienKaraoke();
-			break;
-		case 4:
-			tinhTienDien();
-			break;
-		case 5:
-			doiTien();
-			break;
-		case 6:
-			tinhLaiSuatVay();
-			break;
-		case 7:
-			vayTienMuaXe();
-			break;
-		case 8:
-			sapXepSinhVien();
-			break;
-		case 9:
-			gameLott(); 
-			break;
-		case 10:
-			tinhToanPhanSo();
-			break;
-		default:
-			printf("Chon sai. Chuc nang hop le [0-10]\n");
-			break;
-		}
-
-		printf("\nTiep tuc thuc hien chuc nang nay? [1=Co | 0=Khong]: ");
-		scanf("%d", &tiepTuc);
-		system("cls"); 
-	}
-}
-
-int main()
-{
-	int chonChucNang;
-	do
-	{
-		printf("=== MENU ASSIGNMENT ===\n");
-		printf("1. Kiem Tra So Nguyen\n");
-		printf("2. Tim UCLN va BCNN\n");
-		printf("3. Tinh Tien Karaoke\n");
-		printf("4. Tinh Tien Dien\n");
-		printf("5. Doi Tien\n");
-		printf("6. Tinh Lai Suat Vay\n");
-		printf("7. Vay Tien Mua Xe\n");
-		printf("8. Sap Xep Sinh Vien\n");
-		printf("9. Game FPOLY-LOTT\n");
-		printf("10. Tinh Toan Phan So\n");
-		printf("0. Thoat\n");
-		printf("Hay chon chuc nang [0-10]: ");
-		scanf("%d", &chonChucNang);
-
-		if (chonChucNang != 0) {
-			lapChucNang(chonChucNang);
-		}
-
-	} while (chonChucNang != 0);
-
-	return 0;
-}
-
 void kiemTraSoNguyen() 
 {
 	float x;
@@ -362,4 +273,93 @@ void tinhToanPhanSo()
 		if (t2 != 0) printf("Thuong: %d/%d\n", t1 * m2, m1 * t2);
 		else printf("Khong chia duoc\n");
 	}
+}
+
+
+void kiemTraSoNguyen();
+void timUCLN_BCNN();
+void tinhTienKaraoke();
+void tinhTienDien();
+void doiTien();
+void tinhLaiSuatVay();
+void vayTienMuaXe();
+void sapXepSinhVien();
+void gameLott();
+void tinhToanPhanSo();
+
+void lapChucNang(int chonChucNang)
+{
+	int tiepTuc = 1;
+	while (tiepTuc == 1)
+	{
+		switch (chonChucNang)
+		{
+		case 1:
+			kiemTraSoNguyen();
+			break;
+		case 2:
+			timUCLN_BCNN();
+			break;
+		case 3:
+			tinhTienKaraoke();
+			break;
+		case 4:
+			tinhTienDien();
+			break;
+		case 5:
+			doiTien();
+			break;
+		case 6:
+			tinhLaiSuatVay();
+			break;
+		case 7:
+			vayTienMuaXe();
+			break;
+		case 8:
+			sapXepSinhVien();
+			break;
+		case 9:
+			gameLott();
+			break;
+		case 10:
+			tinhToanPhanSo();
+			break;
+		default:
+			printf("Chon sai. Chuc nang hop le [0-10]\n");
+			break;
+		}
+
+		printf("\nTiep tuc thuc hien chuc nang nay? [1=Co | 0=Khong]: ");
+		scanf("%d", &tiepTuc);
+		system("cls");
+	}
+}
+
+int main()
+{
+	int chonChucNang;
+	do
+	{
+		printf("=== MENU ASSIGNMENT ===\n");
+		printf("1. Kiem Tra So Nguyen\n");
+		printf("2. Tim UCLN va BCNN\n");
+		printf("3. Tinh Tien Karaoke\n");
+		printf("4. Tinh Tien Dien\n");
+		printf("5. Doi Tien\n");
+		printf("6. Tinh Lai Suat Vay\n");
+		printf("7. Vay Tien Mua Xe\n");
+		printf("8. Sap Xep Sinh Vien\n");
+		printf("9. Game FPOLY-LOTT\n");
+		printf("10. Tinh Toan Phan So\n");
+		printf("0. Thoat\n");
+		printf("Hay chon chuc nang [0-10]: ");
+		scanf("%d", &chonChucNang);
+
+		if (chonChucNang != 0) {
+			lapChucNang(chonChucNang);
+		}
+
+	} while (chonChucNang != 0);
+
+	return 0;
 }
