@@ -39,17 +39,47 @@ void sapXepPhanTuMang()
 
 void demoString()
 {
-	//string - string.h
-	char mangKyTu[50] = "ANH";
-	// scanf(" %c"
-	//gets(mangKyTu);
-	while (getchar() != '\n');
-	printf("Nhap ky tu: ");
-	fgets(mangKyTu, sizeof(mangKyTu), stdin);
-	// loop + printf("%c\n"
-	printf("%s", mangKyTu);
+	////string - string.h
+	//char mangKyTu[50] = "ANH";
+	//// scanf(" %c"
+	////gets(mangKyTu);
+	//while (getchar() != '\n');
+
+	//printf("Nhap ten: ");
+	//fgets(mangKyTu, sizeof(mangKyTu), stdin);
+
+	//// loop + printf("%c\n"
+	//printf("%s", mangKyTu);
+	//printf("\n");
+	///*puts(mangKyTu);*/
+
+	///*printf("%d", strlen(mangKyTu) - 1);
+	//printf("\n");*/
+
+	printf("%d", strcmp("b", "B"));
 	printf("\n");
-	/*puts(mangKyTu);*/
+
+	char str[5] = "ABC";
+	printf("%d", strrev(str));
+	printf("\n");
+
+	printf("%d", strupr(str));
+	printf("\n");
+
+	printf("%d", strlwr(str));
+	printf("\n");
+
+
+	if (strstr("ABC", "B"))
+	{
+		printf("Found");
+	}
+	else if
+	{
+		printf("Not Found");
+	}
+	printf("%d");
+	printf("\n");
 }
 
 void demoMang2Chieu()

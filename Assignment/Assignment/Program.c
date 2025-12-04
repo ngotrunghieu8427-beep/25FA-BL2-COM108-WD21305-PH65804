@@ -268,8 +268,12 @@ void gameLott()
 	if (s1 == kq1 || s1 == kq2) dem++;
 	if (s2 == kq1 || s2 == kq2) dem++;
 
-	if (dem == 2) printf("Trung giai NHAT!\n");
-	else if (dem == 1) printf("Trung giai NHI!\n");
+	if (dem == 2)
+	{
+printf("Trung giai nhat\n");
+	}
+	else if
+		(dem == 1) printf("Trung giai nhi\n");
 	else printf("Chuc may man lan sau\n");
 }
 
@@ -291,8 +295,13 @@ void tinhToanPhanSo()
 		printf("Hieu: %d/%d\n", t1 * m2 - t2 * m1, m1 * m2);
 		printf("Tich: %d/%d\n", t1 * t2, m1 * m2);
 		if (t2 != 0)
+		{
 			printf("Thuong: %d/%d\n", t1 * m2, m1 * t2);
-		else printf("Khong chia duoc\n");
+		}
+		else
+		{
+			printf("Khong chia duoc\n");
+		}
 	}
 }
 
