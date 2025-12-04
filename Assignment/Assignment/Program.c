@@ -24,12 +24,15 @@ void kiemTraSoNguyen()
 				dem++;
 			}
 		}
-		if (dem == 2) printf("%d la so nguyen to\n", n);
-		else printf("%d khong phai so nguyen to\n", n);
+		if (dem == 2)
+			printf("%d la so nguyen to\n", n);
+		else 
+			printf("%d khong phai so nguyen to\n", n);
 
 		// Kiem tra so chinh phuong
 		int can = sqrt(n);
-		if (can * can == n) printf("%d la so chinh phuong\n", n);
+		if (can * can == n) 
+			printf("%d la so chinh phuong\n", n);
 		else printf("%d khong phai so chinh phuong\n", n);
 	}
 	else 
@@ -41,8 +44,10 @@ void kiemTraSoNguyen()
 void timUCLN_BCNN()
 {
 	int a, b, i;
-	printf("Nhap a: "); scanf("%d", &a);
-	printf("Nhap b: "); scanf("%d", &b);
+	printf("Nhap a: ");
+	scanf("%d", &a);
+	printf("Nhap b: ");
+	scanf("%d", &b);
 
 	// Tim UCLN 
 	int ucln = 1;
@@ -64,8 +69,10 @@ void timUCLN_BCNN()
 void tinhTienKaraoke()
 {
 	int batDau, ketThuc;
-	printf("Nhap gio bat dau: "); scanf("%d", &batDau);
-	printf("Nhap gio ket thuc: "); scanf("%d", &ketThuc);
+	printf("Nhap gio bat dau: ");
+	scanf("%d", &batDau);
+	printf("Nhap gio ket thuc: "); 
+	scanf("%d", &ketThuc);
 
 	if (batDau < 12 || ketThuc > 23 || batDau >= ketThuc) 
 	{
@@ -96,7 +103,8 @@ void tinhTienKaraoke()
 void tinhTienDien() 
 {
 	float kwh, tien;
-	printf("Nhap so kwh: "); scanf("%f", &kwh);
+	printf("Nhap so kwh: "); 
+	scanf("%f", &kwh);
 
 	if (kwh <= 50) tien = kwh * 1678;
 	else if (kwh <= 100) tien = 50 * 1678 + (kwh - 50) * 1734;
@@ -111,7 +119,8 @@ void tinhTienDien()
 void doiTien() 
 {
 	int tien;
-	printf("Nhap so tien: "); scanf("%d", &tien);
+	printf("Nhap so tien: ");
+	scanf("%d", &tien);
 
 	// Mang chua cac menh gia
 	int menhGia[9] = { 500, 200, 100, 50, 20, 10, 5, 2, 1 };
@@ -131,7 +140,8 @@ void doiTien()
 void tinhLaiSuatVay()
 {
 	double vay;
-	printf("Nhap tien vay: "); scanf("%lf", &vay);
+	printf("Nhap tien vay: ");
+	scanf("%lf", &vay);
 
 	double gocTra = vay / 12;
 	int i;
@@ -175,7 +185,8 @@ void vayTienMuaXe()
 void sapXepSinhVien() 
 {
 	int n, i, j;
-	printf("Nhap so luong SV: "); scanf("%d", &n);
+	printf("Nhap so luong SV: "); 
+	scanf("%d", &n);
     // Mang chuoi 
 	char ten[100][50];
     // Mang so thuc 
@@ -184,7 +195,7 @@ void sapXepSinhVien()
 	// Nhap du lieu
 	for (i = 0; i < n; i++)
 	{
-		printf("SV %d - Ten: ", i + 1);
+		printf("Sinh vien %d - Ten: ", i + 1);
 
 		while (getchar() != '\n');
 		fgets(ten[i], sizeof(ten[i]), stdin);
@@ -221,11 +232,16 @@ void sapXepSinhVien()
 	for (i = 0; i < n; i++) 
 	{
 		printf("%s \t %.1f \t ", ten[i], diem[i]);
-		if (diem[i] >= 9) printf("Xuat sac\n");
-		else if (diem[i] >= 8) printf("Gioi\n");
-		else if (diem[i] >= 6.5) printf("Kha\n");
-		else if (diem[i] >= 5) printf("TB\n");
-		else printf("Yeu\n");
+		if (diem[i] >= 9)
+			printf("Xuat sac\n");
+		else if (diem[i] >= 8)
+			printf("Gioi\n");
+		else if (diem[i] >= 6.5)
+			printf("Kha\n");
+		else if (diem[i] >= 5)
+			printf("TB\n");
+		else
+			printf("Yeu\n");
 	}
 }
 
@@ -234,12 +250,14 @@ void gameLott()
 	int s1, s2;
 	do 
 	{
-		printf("Nhap so 1 (1-15): "); scanf("%d", &s1);
+		printf("Nhap so 1 (1-15): ");
+		scanf("%d", &s1);
 	} while (s1 < 1 || s1 > 15);
 
 	do
 	{
-		printf("Nhap so 2 (1-15): "); scanf("%d", &s2);
+		printf("Nhap so 2 (1-15): ");
+		scanf("%d", &s2);
 	} while (s2 < 1 || s2 > 15);
 
 	int kq1 = rand() % 15 + 1;
@@ -258,8 +276,10 @@ void gameLott()
 void tinhToanPhanSo() 
 {
 	int t1, m1, t2, m2;
-	printf("Nhap tu1 mau1: "); scanf("%d %d", &t1, &m1);
-	printf("Nhap tu2 mau2: "); scanf("%d %d", &t2, &m2);
+	printf("Nhap tu1 mau1: "); 
+	scanf("%d %d", &t1, &m1);
+	printf("Nhap tu2 mau2: ");
+	scanf("%d %d", &t2, &m2);
 
 	if (m1 == 0 || m2 == 0) 
 	{
@@ -270,7 +290,8 @@ void tinhToanPhanSo()
 		printf("Tong: %d/%d\n", t1 * m2 + t2 * m1, m1 * m2);
 		printf("Hieu: %d/%d\n", t1 * m2 - t2 * m1, m1 * m2);
 		printf("Tich: %d/%d\n", t1 * t2, m1 * m2);
-		if (t2 != 0) printf("Thuong: %d/%d\n", t1 * m2, m1 * t2);
+		if (t2 != 0)
+			printf("Thuong: %d/%d\n", t1 * m2, m1 * t2);
 		else printf("Khong chia duoc\n");
 	}
 }
