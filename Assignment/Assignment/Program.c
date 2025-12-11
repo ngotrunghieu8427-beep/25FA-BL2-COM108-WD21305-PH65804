@@ -82,7 +82,8 @@ int main()
 		printf("Hay chon chuc nang [0-10]: ");
 		scanf("%d", &chonChucNang);
 
-		if (chonChucNang != 0) {
+		if (chonChucNang != 0)
+		{
 			lapChucNang(chonChucNang);
 		}
 

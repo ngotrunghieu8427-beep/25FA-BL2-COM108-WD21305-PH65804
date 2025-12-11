@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 void kiemTraSoNguyen()
 {
@@ -74,10 +75,12 @@ void demoString()
 	{
 		printf("Found");
 	}
-	else if
+	else 
 	{
 		printf("Not Found");
 	}
+		
+	
 	printf("%d");
 	printf("\n");
 }
@@ -92,7 +95,7 @@ void demoMang2Chieu()
 	{
 		scanf(" %c", &mangKyTu[i]);
 	}
-	// loop + printf("%c\n"
+	// loop + printf("%c\n")
 	puts(mangKyTu);
 
 	int array[2][3];
