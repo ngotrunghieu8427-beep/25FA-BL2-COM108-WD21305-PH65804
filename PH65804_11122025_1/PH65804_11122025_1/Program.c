@@ -12,9 +12,9 @@ struct thuCung
 void thongTinThuCung()
 {
 	struct thuCung tuoi;
-	int n, i;
+	int n = 3, i;
 
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < 3; i++)
 	{
 		while (getchar() != '\n');
 		fgets(tuoi.ten, sizeof(tuoi.ten), stdin);
@@ -23,13 +23,18 @@ void thongTinThuCung()
 
 	}
 
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < 3; i++)
 	{
 		put(tuoi.ten);
 		put(tuoi.ma);
 		printf("%d\n", tuoi.namSinh);
 	}
 
+	printf("Thong tin thu cung da nhap xong.\n");
+	printf("Ten thu cung: %s", tuoi.ten);
+	printf("Ma thu cung: %s", tuoi.ma);
+	printf("Nam sinh thu cung: %d\n", tuoi.namSinh);
+	printf("\n");
 }
 
 void soNguyen()
@@ -68,21 +73,43 @@ void soNguyen()
 void thongSoThuCung()
 {
 	int soLuong;
-	int canNang;
+	int canNang[100];
 	int tong = 0;
 	int thapNhat;
-	int soLuongDuoiTB = 0
+	int trungBinh ;
+	int soLuongDuoiTB = 0;
 
-		for (int i = 0; i < soLuong; i++
+	printf("Nhap so luong thu cung: ");
+	scanf("%d", &soLuong);
 
-			for (int i = 0; i < soLuong; i++)
-			{
-				tong = tong + canNang[i];
-				if (canNang[i] < thapNhat)
-				{
-					thapNhat = canNang[i];
-				}
-			}
+	for (int i = 0; i < soLuong; i++)
+	{
+		printf("Nhap can nang thu cung thu %d: ", i + 1);
+		scanf("%d", &canNang[i]);
+
+		tong = tong + canNang[i];
+	}
+	thapNhat = canNang[0];
+	for (int i = 1; i < soLuong; i++)
+	{
+		if (canNang[i] < thapNhat)
+		{
+			thapNhat = canNang[i];
+		}
+	}
+	trungBinh = tong / soLuong;
+	for (int i = 0; i < soLuong; i++)
+	{
+		if (canNang[i] < trungBinh)
+		{
+			soLuongDuoiTB++;
+		}
+	}
+	printf("Can nang thap nhat la: %d\n", thapNhat);
+	printf("Can nang trung binh la: %d\n", tong / soLuong);
+	printf("So luong thu cung co can nang duoi trung binh la: %d\n", soLuongDuoiTB);
+
+			
 }
 
 
